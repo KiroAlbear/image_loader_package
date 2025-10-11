@@ -23,4 +23,3 @@ flutter:
 
   assets:
     - assetFlag/
-    - packages/image_loader/assetFlag/
