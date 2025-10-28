@@ -5,6 +5,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gif_view/gif_view.dart';
+import 'package:image_loader/my_cache_manager.dart';
 import 'package:lottie/lottie.dart';
 
 import 'default_error_widget.dart';
@@ -217,6 +218,9 @@ class ImageHelper extends StatelessWidget {
   /// box border surounded image
   final BoxBorder? boxBorder;
 
+
+  final MyCacheManager _cacheManager = MyCacheManager();
+
   ImageHelper(
       {required this.image,
       required this.imageType,
@@ -347,6 +351,7 @@ class ImageHelper extends StatelessWidget {
   Widget get _cached => CachedNetworkImage(
         imageUrl: image,
         color: color,
+        cacheManager: _cacheManager,
         useOldImageOnUrlChange: false,
         placeholderFadeInDuration: fadeInDuration,
         colorBlendMode: blendMode,
