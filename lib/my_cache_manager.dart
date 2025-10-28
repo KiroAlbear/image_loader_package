@@ -7,6 +7,6 @@ class MyCacheManager extends CacheManager {
       : super(Config(
     key,
     stalePeriod: const Duration(days: 30), // cache valid for 30 days
-    maxNrOfCacheObjects: 200, // limit number of images
+    maxNrOfCacheObjects: 400, // limit number of images
   ));
 }
