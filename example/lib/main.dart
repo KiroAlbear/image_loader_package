@@ -123,14 +123,16 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
     );
-
   }
 
-  Widget get _loader =>  SpinKitWave(
-  color: Colors.redAccent,
-  size: 100000,
-  type: SpinKitWaveType.start,
-  );
+  Widget get _loader => SpinKitWave(
+        color: Colors.redAccent,
+        size: 100000,
+        type: SpinKitWaveType.start,
+      );
 
-  Widget get _errorBuilderIcon=> Icon(Icons.image_not_supported, size: 10000,);
+  Widget get _errorBuilderIcon => Icon(
+        Icons.image_not_supported,
+        size: 10000,
+      );
 }

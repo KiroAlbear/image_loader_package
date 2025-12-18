@@ -219,7 +219,6 @@ class ImageHelper extends StatelessWidget {
   /// box border surounded image
   final BoxBorder? boxBorder;
 
-
   final MyCacheManager _cacheManager = MyCacheManager();
 
   ImageHelper(
@@ -530,12 +529,11 @@ class ImageHelper extends StatelessWidget {
 
   Widget get _loaderBuilder => Center(
         child: SizedBox(
-          width: _loaderWidth,
-          height: _loaderHeight,
-          child: FittedBox(
-            child: Skeleton.leaf(child: Bone.icon(size: 150,)),
-            fit: BoxFit.contain,
-          ),
+          child: Skeletonizer.zone(
+              child: Bone.square(
+            borderRadius: BorderRadius.circular(20),
+            size: double.infinity,
+          )),
         ),
       );
 
