@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gif_view/gif_view.dart';
 import 'package:image_loader/my_cache_manager.dart';
 import 'package:lottie/lottie.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 import 'default_error_widget.dart';
 
@@ -532,7 +533,7 @@ class ImageHelper extends StatelessWidget {
           width: _loaderWidth,
           height: _loaderHeight,
           child: FittedBox(
-            child: _loader,
+            child: Skeleton.leaf(child: Bone.icon(size: 150,)),
             fit: BoxFit.contain,
           ),
         ),
